@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/onboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/page_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/page_pad_wide"
+                android:paddingRight="@dimen/page_pad_wide">
+
+                <TextView
+                    style="@style/TideText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="96dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="@string/onboard_intro_title"
+                    android:textColor="@color/ink"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/btn_intro_next"
+                    style="@style/TideButton.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/onboard_intro_action" />
+
+                <TextView
+                    android:id="@+id/btn_intro_login"
+                    style="@style/TideButton.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/onboard_intro_login" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/page_pad_wide"
+                android:paddingRight="@dimen/page_pad_wide"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/top_bar_height">
+
+                    <ImageButton
+                        android:id="@+id/btn_onboard_back"
+                        android:layout_width="@dimen/touch_target"
+                        android:layout_height="@dimen/touch_target"
+                        android:layout_gravity="start|center_vertical"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/onboard_back"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_arrow_back"
+                        android:tint="@color/ink_2" />
+                </FrameLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:overScrollMode="never">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="4dp">
+
+                        <TextView
+                            style="@style/TideText.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/onboard_account_title" />
+
+                        <TextView
+                            style="@style/TideText.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:text="@string/login_invite_label" />
+
+                        <EditText
+                            android:id="@+id/input_onboard_invite"
+                            style="@style/TideInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:layout_marginTop="6dp"
+                            android:hint="@string/hint_invite"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                        <TextView
+                            style="@style/TideText.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="@string/login_account_label" />
+
+                        <EditText
+                            android:id="@+id/input_onboard_account"
+                            style="@style/TideInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:layout_marginTop="6dp"
+                            android:autofillHints="username"
+                            android:hint="@string/login_account_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                        <TextView
+                            style="@style/TideText.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="@string/login_password_label" />
+
+                        <EditText
+                            android:id="@+id/input_onboard_password"
+                            style="@style/TideInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:layout_marginTop="6dp"
+                            android:autofillHints="newPassword"
+                            android:hint="@string/hint_password_min"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/text_onboard_account_error"
+                            style="@style/TideText.Error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:minHeight="20dp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/btn_onboard_account_next"
+                    style="@style/TideButton.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onboard_account_next" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/page_pad_wide"
+                android:paddingRight="@dimen/page_pad_wide"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/top_bar_height">
+
+                    <TextView
+                        android:id="@+id/btn_onboard_skip"
+                        style="@style/TideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:text="@string/onboard_profile_skip"
+                        android:textColor="@color/ink_2"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:overScrollMode="never">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TideText.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/onboard_profile_title" />
+
+                        <FrameLayout
+                            android:id="@+id/onboard_avatar_frame"
+                            android:layout_width="@dimen/avatar_profile"
+                            android:layout_height="@dimen/avatar_profile"
+                            android:layout_marginTop="26dp"
+                            android:background="@drawable/bg_avatar_dashed"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/onboard_avatar_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_avatar_circle"
+                                android:contentDescription="@string/onboard_avatar"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/onboard_avatar_plus"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/onboard_avatar"
+                                android:src="@drawable/ic_add"
+                                android:tint="@color/ink_3" />
+                        </FrameLayout>
+
+                        <TextView
+                            style="@style/TideText.Micro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/onboard_profile_avatar_hint"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/TideText.Label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:text="@string/onboard_profile_nickname" />
+
+                        <EditText
+                            android:id="@+id/input_onboard_name"
+                            style="@style/TideInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:layout_marginTop="6dp"
+                            android:autofillHints="name"
+                            android:hint="@string/onboard_profile_nickname"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/text_onboard_name_error"
+                            style="@style/TideText.Error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:minHeight="20dp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/btn_onboard_enter"
+                    style="@style/TideButton.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onboard_profile_enter" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/onboard_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="22dp"
+            android:paddingBottom="26dp">
+
+            <View
+                android:id="@+id/onboard_dot_0"
+                android:layout_width="18dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_dot_on" />
+
+            <View
+                android:id="@+id/onboard_dot_1"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_dot_off" />
+
+            <View
+                android:id="@+id/onboard_dot_2"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/bg_dot_off" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

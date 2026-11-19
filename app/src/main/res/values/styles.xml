@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorAccent">@color/teal</item>
+        <item name="android:colorControlHighlight">@color/ripple</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="TideText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TideText.Display" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TideText.Title" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TideText.Body" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="TideText.Meta" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_meta</item>
+        <item name="android:textColor">@color/ink_2</item>
+    </style>
+
+    <style name="TideText.Micro" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_micro</item>
+        <item name="android:textColor">@color/ink_3</item>
+    </style>
+
+    <style name="TideText.Label" parent="@style/TideText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ink_3</item>
+    </style>
+
+    <style name="TideText.Link" parent="@style/TideText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/teal</item>
+    </style>
+
+    <style name="TideText.Code" parent="@style/TideText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.12</item>
+    </style>
+
+    <style name="TideText.Error" parent="@style/TideText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/badge</item>
+    </style>
+
+    <style name="TideButton.Primary" parent="@style/TideText">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:background">@drawable/bg_primary</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="TideButton.Secondary" parent="@style/TideButton.Primary">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/bg_secondary</item>
+    </style>
+
+    <style name="TideInput" parent="@style/TideText.Body">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColorHint">@color/ink_3</item>
+    </style>
+
+    <style name="TideCard">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+</resources>

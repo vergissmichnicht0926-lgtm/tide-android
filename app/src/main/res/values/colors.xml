@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#F6EFE2</color>
+
+    <color name="bg">#F6EFE2</color>
+    <color name="paper">#FFFFFF</color>
+    <color name="paper_alt">#FBF7EE</color>
+    <color name="line">#EDE4D5</color>
+    <color name="line2">#EFE6DC</color>
+    <color name="stroke">#DED3C2</color>
+    <color name="teal">#5B8C7E</color>
+    <color name="teal_dark">#3E685D</color>
+    <color name="teal_soft">#8DBBA9</color>
+    <color name="teal_tint">#EDF3F0</color>
+    <color name="chip">#EFE7D8</color>
+    <color name="ink">#2B2B2B</color>
+    <color name="ink_2">#8A8074</color>
+    <color name="ink_3">#B9B0A4</color>
+    <color name="badge">#C4705C</color>
+    <color name="badge_tint">#F7E8E3</color>
+    <color name="mute">#C9BFB0</color>
+    <color name="disabled">#F1EADC</color>
+    <color name="dim">#E3DACB</color>
+    <color name="scrim">#61000000</color>
+    <color name="ripple">#1F5B8C7E</color>
+    <color name="file_on_accent">#2EFFFFFF</color>
+</resources>
